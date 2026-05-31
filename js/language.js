@@ -158,6 +158,8 @@
       en: "Personalized attention · Warm, professional response"
     },
 
+    "social.follow": { es: "Síguenos", en: "Follow us" },
+
     /* Final CTA */
     "cta.title": { es: "Tu proceso de transformación puede comenzar hoy",
                    en: "Your process of transformation can begin today" },

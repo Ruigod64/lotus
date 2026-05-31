@@ -93,7 +93,7 @@
 .hero__bg {
   background-image:
     linear-gradient(to right, rgba(246, 241, 235, 0.94) 0%, rgba(246, 241, 235, 0.6) 45%, rgba(246, 241, 235, 0.25) 100%),
-    url("https://images.unsplash.com/photo-1600334129128-685c5582fd35?auto=format&fit=crop&w=1600&q=80");
+    url("../assets/hero.jpg");
 }
 
 .hero__glow {
@@ -475,6 +475,50 @@
   color: var(--color-text-soft);
 }
 
+/* Redes sociales bajo el formulario */
+.booking__follow {
+  margin-top: var(--space-lg);
+  font-size: var(--fs-min);
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-text-soft);
+}
+
+.booking__socials {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-xs);
+  margin-top: var(--space-sm);
+}
+
+.booking__social {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-pill);
+  color: var(--color-text-soft);
+  transition: color var(--dur-fast) var(--ease-soft),
+    border-color var(--dur-fast) var(--ease-soft),
+    background-color var(--dur-fast) var(--ease-soft),
+    transform var(--dur-fast) var(--ease-soft);
+}
+
+.booking__social:hover,
+.booking__social:focus-visible {
+  color: var(--color-gold);
+  border-color: var(--color-gold);
+  background-color: rgba(198, 167, 125, 0.08);
+  transform: translateY(-3px);
+}
+
+.booking__social svg {
+  width: 18px;
+  height: 18px;
+}
+
 /* ---------- Final CTA ---------- */
 .cta {
   position: relative;
@@ -488,7 +532,7 @@
   position: absolute;
   inset: -5% 0;
   z-index: -2;
-  background-image: url("https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1600&q=80");
+  background-image: url("../assets/cta.jpg");
   background-size: cover;
   background-position: center;
   filter: blur(3px) saturate(0.9);
