@@ -1,0 +1,324 @@
+/* ============================================================
+   Layout: containers, sections, header, footer, grids
+   ============================================================ */
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 5vw, 3rem);
+}
+
+.container--narrow {
+  max-width: var(--container-narrow);
+}
+
+.section {
+  position: relative;
+  padding-block: var(--space-3xl);
+}
+
+.section--alt {
+  background-color: var(--color-bg-alt);
+}
+
+.section__head {
+  max-width: 720px;
+  margin-inline: auto;
+  margin-bottom: var(--space-xl);
+  text-align: center;
+}
+
+.section__head .lead {
+  margin-top: var(--space-md);
+}
+
+/* ---------- Header / Navigation ---------- */
+.header {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline: 0;
+  z-index: var(--z-header);
+  transition: box-shadow var(--dur-mid) var(--ease-soft);
+}
+
+/* Fondo glass en un pseudo-elemento, NO en .header.
+   Motivo: aplicar backdrop-filter al .header lo convertiría en el
+   bloque contenedor de sus descendientes position:fixed (el drawer
+   .nav), rompiéndolo al hacer scroll. En el ::before no afecta al nav. */
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: rgba(255, 253, 249, 0.82);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  opacity: 0;
+  transition: opacity var(--dur-mid) var(--ease-soft);
+  pointer-events: none;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding-block: var(--space-md);
+}
+
+.header.is-scrolled {
+  box-shadow: var(--shadow-xs);
+}
+
+.header.is-scrolled::before {
+  opacity: 1;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+  white-space: nowrap;   /* evita que la marca se parta en móvil */
+}
+
+.brand__mark {
+  width: 34px;
+  height: 34px;
+  color: var(--color-gold);
+  flex: none;
+}
+
+.brand__name span {
+  color: var(--color-gold);
+}
+
+/* Cluster de controles siempre visible (idioma + hamburguesa) */
+.header__controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex: none;
+}
+
+/* Primary nav */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2.4vw, 2.25rem);
+  margin-left: auto;   /* empuja el menú a la derecha en desktop */
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.85rem, 2vw, 2rem);
+}
+
+.nav__link {
+  position: relative;
+  font-size: var(--fs-small);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--color-text);
+  padding-block: var(--space-2xs);
+  transition: color var(--dur-fast) var(--ease-soft);
+}
+
+.nav__link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--color-gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--dur-mid) var(--ease-out);
+}
+
+.nav__link:hover,
+.nav__link:focus-visible {
+  color: var(--color-gold);
+}
+
+.nav__link:hover::after,
+.nav__link:focus-visible::after {
+  transform: scaleX(1);
+}
+
+/* Language toggle */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+  background: rgba(255, 253, 249, 0.5);
+}
+
+.lang-toggle__btn {
+  padding: 0.35rem 0.75rem;
+  font-size: var(--fs-min);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--color-text-soft);
+  transition: background-color var(--dur-fast) var(--ease-soft),
+    color var(--dur-fast) var(--ease-soft);
+}
+
+.lang-toggle__btn.is-active {
+  background: var(--color-gold);
+  color: var(--color-surface);
+}
+
+/* Hamburger (mobile) */
+.nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  position: relative;
+  flex: none;
+}
+
+.nav-toggle__bar,
+.nav-toggle__bar::before,
+.nav-toggle__bar::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 24px;
+  height: 2px;
+  background: var(--color-text);
+  border-radius: 2px;
+  transform: translateX(-50%);
+  transition: transform var(--dur-fast) var(--ease-soft),
+    opacity var(--dur-fast) var(--ease-soft);
+}
+
+.nav-toggle__bar {
+  top: 50%;
+  margin-top: -1px;
+}
+.nav-toggle__bar::before { top: -8px; }
+.nav-toggle__bar::after { top: 8px; }
+
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar {
+  background: transparent;
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar::before {
+  top: 0;
+  transform: translateX(-50%) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] .nav-toggle__bar::after {
+  top: 0;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background-color: var(--color-footer);
+  color: #E9E0D4;
+  padding-block: var(--space-2xl) var(--space-lg);
+}
+
+.footer a {
+  color: #E9E0D4;
+  transition: color var(--dur-fast) var(--ease-soft);
+}
+
+.footer a:hover {
+  color: var(--color-gold);
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: var(--space-xl);
+  padding-bottom: var(--space-xl);
+  border-bottom: 1px solid rgba(233, 224, 212, 0.14);
+}
+
+.footer__brand .brand {
+  color: #FFFDF9;
+}
+
+.footer__tagline {
+  margin-top: var(--space-md);
+  max-width: 34ch;
+  color: rgba(233, 224, 212, 0.72);
+  font-size: var(--fs-small);
+}
+
+.footer__col h4 {
+  color: #FFFDF9;
+  font-size: 1.05rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+  font-family: var(--font-body);
+  font-weight: 600;
+}
+
+.footer__list {
+  display: grid;
+  gap: var(--space-xs);
+  font-size: var(--fs-small);
+}
+
+.footer__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2xs);
+  color: rgba(233, 224, 212, 0.8);
+}
+
+.footer__list svg {
+  width: 16px;
+  height: 16px;
+  margin-top: 3px;
+  color: var(--color-gold);
+  flex: none;
+}
+
+.footer__socials {
+  display: flex;
+  gap: var(--space-xs);
+  margin-top: var(--space-md);
+}
+
+.footer__social {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(233, 224, 212, 0.22);
+  border-radius: var(--radius-pill);
+  transition: border-color var(--dur-fast) var(--ease-soft),
+    background-color var(--dur-fast) var(--ease-soft),
+    transform var(--dur-fast) var(--ease-soft);
+}
+
+.footer__social:hover {
+  border-color: var(--color-gold);
+  background: rgba(198, 167, 125, 0.12);
+  transform: translateY(-3px);
+}
+
+.footer__social svg {
+  width: 18px;
+  height: 18px;
+}
+
+.footer__bottom {
+  padding-top: var(--space-md);
+  text-align: center;
+  font-size: var(--fs-min);
+  color: rgba(233, 224, 212, 0.55);
+}

@@ -1,0 +1,133 @@
+/* ============================================================
+   Old-browser fallbacks via @supports (progressive enhancement)
+   Pairs with js/support.js which sets feature classes on <html>.
+   Loaded LAST so it can override modern declarations safely.
+   ============================================================ */
+
+/* ---------- No-JS: reveal everything, no hidden content ---------- */
+.no-js [data-reveal],
+.no-js [data-reveal-stagger] > * {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.no-js .cursor-glow {
+  display: none;
+}
+
+/* ---------- CSS custom properties not supported ---------- */
+/* Hard-coded safety values so the page is still usable & on-brand */
+@supports not (--test: 0) {
+  body {
+    background-color: #F6F1EB;
+    color: #4E443D;
+    font-family: Georgia, serif;
+  }
+  .btn {
+    background-color: #C6A77D;
+    color: #FFFDF9;
+    padding: 14px 30px;
+    border-radius: 999px;
+  }
+  .btn--ghost {
+    background-color: transparent;
+    color: #4E443D;
+    border: 2px solid #C6A77D;
+  }
+  .service-card,
+  .testimonial,
+  .booking__card {
+    background-color: #FFFDF9;
+    border: 1px solid #E4D9CB;
+    border-radius: 18px;
+  }
+}
+
+/* ---------- Flex/Grid gap not supported (legacy Safari) ---------- */
+.no-gap .nav__list > * + * { margin-left: 1rem; }
+.no-gap .hero__actions > * + * { margin-left: 1rem; }
+.no-gap .booking__actions > * { margin-bottom: 1rem; }
+
+/* ---------- CSS Grid not supported -> flexbox fallback ---------- */
+@supports not (display: grid) {
+  .services__grid,
+  .testimonials__grid,
+  .atmosphere__grid,
+  .footer__grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.75rem;
+  }
+  .services__grid > *,
+  .testimonials__grid > * {
+    flex: 1 1 300px;
+    margin: 0.75rem;
+  }
+  .atmosphere__grid > * {
+    flex: 1 1 260px;
+    height: 240px;
+    margin: 0.5rem;
+  }
+  .footer__grid > * {
+    flex: 1 1 220px;
+    margin: 0.75rem;
+  }
+  .about__grid {
+    display: block;
+  }
+  .about__grid > * + * {
+    margin-top: 2.5rem;
+  }
+  .booking__actions {
+    display: block;
+  }
+  .booking__actions > * {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+/* ---------- aspect-ratio not supported ---------- */
+@supports not (aspect-ratio: 1) {
+  .about__img {
+    height: 520px;
+  }
+}
+
+/* ---------- backdrop-filter not supported -> solid header ---------- */
+@supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .header.is-scrolled {
+    background-color: #FFFDF9;
+  }
+  .nav-backdrop {
+    background: rgba(59, 51, 45, 0.55);
+  }
+}
+
+/* ---------- small viewport units (svh/dvh) not supported ---------- */
+@supports not (height: 100svh) {
+  .hero {
+    min-height: 100vh;
+  }
+}
+
+/* ---------- mix-blend-mode not supported -> softer glow ---------- */
+.no-blend .cursor-glow {
+  mix-blend-mode: normal;
+  background: radial-gradient(circle,
+    rgba(198, 167, 125, 0.14) 0%, transparent 70%);
+}
+
+/* ---------- object-fit not supported (old IE/Edge) ---------- */
+.no-objectfit .about__img,
+.no-objectfit .atmosphere__item img,
+.no-objectfit .testimonial__avatar {
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- position: sticky/fixed fallback ---------- */
+.no-sticky .header {
+  position: absolute;
+}

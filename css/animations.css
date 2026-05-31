@@ -1,0 +1,103 @@
+/* ============================================================
+   Animations & decorative dividers
+   ============================================================ */
+
+/* ---------- Scroll-reveal base state ----------
+   JS adds .is-visible (or GSAP animates directly). When JS is
+   unavailable, .no-js fallback in fallbacks.css shows everything. */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity var(--dur-slow) var(--ease-out),
+    transform var(--dur-slow) var(--ease-out);
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* staggered children */
+[data-reveal-stagger] > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity var(--dur-slow) var(--ease-out),
+    transform var(--dur-slow) var(--ease-out);
+}
+
+[data-reveal-stagger].is-visible > * {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- Keyframes ---------- */
+@keyframes scroll-hint {
+  0%   { transform: scaleY(0); transform-origin: top; opacity: 0; }
+  40%  { transform: scaleY(1); transform-origin: top; opacity: 1; }
+  60%  { transform: scaleY(1); transform-origin: bottom; opacity: 1; }
+  100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-14px); }
+}
+
+.float-slow {
+  animation: float-slow 7s var(--ease-soft) infinite;
+}
+
+/* ---------- Decorative organic divider ---------- */
+.divider {
+  display: block;
+  width: 100%;
+  line-height: 0;
+  color: var(--color-bg-alt);
+}
+
+.divider svg {
+  width: 100%;
+  height: clamp(40px, 6vw, 90px);
+}
+
+.divider--flip svg {
+  transform: rotate(180deg);
+}
+
+/* Thin decorative gold line with centered lotus */
+.ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  margin-block: var(--space-md);
+}
+
+.ornament::before,
+.ornament::after {
+  content: "";
+  height: 1px;
+  width: clamp(40px, 12vw, 120px);
+  background: linear-gradient(to right, transparent, var(--color-gold), transparent);
+}
+
+.ornament svg {
+  width: 26px;
+  height: 26px;
+  color: var(--color-gold);
+}
+
+/* Floating decorative lotus accents */
+.deco-lotus {
+  position: absolute;
+  color: var(--color-gold);
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.deco-lotus svg {
+  width: 100%;
+  height: 100%;
+}

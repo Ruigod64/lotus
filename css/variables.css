@@ -1,0 +1,74 @@
+/* ============================================================
+   Lotus Transformation Healing — Design Tokens
+   Single source of truth for the visual language.
+   ============================================================ */
+
+:root {
+  /* ---- Color palette (premium spa / holistic) ---- */
+  --color-bg: #F6F1EB;            /* beige marfil cálido */
+  --color-bg-alt: #EFE7DE;        /* arena suave */
+  --color-surface: #FFFDF9;       /* blanco cálido */
+  --color-gold: #C6A77D;          /* dorado champagne */
+  --color-gold-soft: #D8C2A0;     /* dorado tenue */
+  --color-text: #4E443D;          /* café suave elegante */
+  --color-text-soft: #7A6E63;     /* café desaturado */
+  --color-sage: #A7B3A2;          /* verde salvia */
+  --color-sage-soft: #C9D1C4;     /* salvia muy tenue */
+  --color-line: #E4D9CB;          /* líneas decorativas */
+  --color-footer: #3B332D;        /* beige oscuro elegante */
+
+  /* ---- Typography ---- */
+  --font-display: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+  --font-body: 'Poppins', 'Montserrat', system-ui, -apple-system, sans-serif;
+
+  /* Fluid type scale (clamp keeps it responsive & respirable) */
+  --fs-hero: clamp(2.75rem, 7vw, 5.5rem);
+  --fs-h2: clamp(2rem, 4.5vw, 3.4rem);
+  --fs-h3: clamp(1.35rem, 2.4vw, 1.8rem);
+  --fs-lead: clamp(1.05rem, 1.6vw, 1.35rem);
+  --fs-body: clamp(0.95rem, 1.1vw, 1.05rem);
+  --fs-small: 0.8125rem;          /* 13px */
+  --fs-min: 0.75rem;              /* 12px mínimo */
+
+  --lh-tight: 1.12;
+  --lh-snug: 1.35;
+  --lh-relaxed: 1.75;
+
+  /* ---- Spacing scale (generous, premium breathing room) ---- */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: clamp(5rem, 12vw, 10rem);
+
+  /* ---- Layout ---- */
+  --container-max: 1200px;
+  --container-narrow: 760px;
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+
+  /* ---- Elevation (soft, warm shadows) ---- */
+  --shadow-text: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-xs: 0 4px 14px rgba(78, 68, 61, 0.06);
+  --shadow-sm: 0 10px 30px rgba(78, 68, 61, 0.08);
+  --shadow-md: 0 18px 50px rgba(78, 68, 61, 0.12);
+  --shadow-gold: 0 14px 40px rgba(198, 167, 125, 0.28);
+
+  /* ---- Motion (slow, elegant) ---- */
+  --ease-soft: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 0.3s;
+  --dur-mid: 0.6s;
+  --dur-slow: 1s;
+
+  /* ---- Z-index scale ---- */
+  --z-cursor: 9999;
+  --z-header: 100;
+  --z-overlay: 90;
+}

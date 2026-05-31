@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#F6F1EB" />
+  <meta name="description" content="Lotus Transformation Healing — Centro holístico de sanación integral, terapias energéticas y restauración emocional. Reiki, tanatología, alineación de chakras y más." />
+  <title>Lotus Transformation Healing — Centro Holístico de Sanación</title>
+
+  <!-- Preconnect + fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles (order matters; fallbacks last) -->
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/three.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/fallbacks.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Ir al contenido</a>
+
+  <!-- Cursor luminous follower -->
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#hero" aria-label="Lotus Transformation Healing — inicio">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M24 40c-8 0-15-4-17-9 3 1 6 1 9 0M24 40c8 0 15-4 17-9-3 1-6 1-9 0" />
+            <path d="M24 40c-5-2-8-7-8-13 0-5 3-9 8-13 5 4 8 8 8 13 0 6-3 11-8 13Z" />
+            <path d="M24 40c-7-1-12-6-13-12 4 2 7 5 8 9M24 40c7-1 12-6 13-12-4 2-7 5-8 9" />
+          </svg>
+        </span>
+        <span class="brand__name">Lotus <span>Healing</span></span>
+      </a>
+
+      <nav class="nav" id="primary-nav" aria-label="Navegación principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#about" data-i18n="nav.about">Sobre Rose</a></li>
+          <li><a class="nav__link" href="#services" data-i18n="nav.services">Servicios</a></li>
+          <li><a class="nav__link" href="#atmosphere" data-i18n="nav.atmosphere">Experiencia</a></li>
+          <li><a class="nav__link" href="#testimonials" data-i18n="nav.testimonials">Testimonios</a></li>
+        </ul>
+
+        <a class="btn nav__cta" href="#booking" data-i18n="nav.cta">Agendar Sesión</a>
+      </nav>
+
+      <!-- Controles siempre visibles (fuera del drawer) -->
+      <div class="header__controls">
+        <div class="lang-toggle" role="group" aria-label="Cambiar idioma / Change language">
+          <button class="lang-toggle__btn" type="button" data-lang="es" aria-pressed="true">ES</button>
+          <button class="lang-toggle__btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+
+        <button class="nav-toggle" type="button" aria-label="Abrir menú" data-i18n-attr="aria-label:a11y.menu" aria-expanded="false" aria-controls="primary-nav">
+          <span class="nav-toggle__bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-backdrop" aria-hidden="true"></div>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero__layer hero__bg" data-parallax="0.2" aria-hidden="true"></div>
+      <div class="hero__glow" aria-hidden="true"></div>
+      <!-- Esferas 3D de energía (Three.js) -->
+      <canvas class="hero__canvas" data-three="spheres" aria-hidden="true"></canvas>
+
+      <div class="container hero__content">
+        <span class="eyebrow" data-i18n="hero.eyebrow">Centro Holístico de Sanación</span>
+        <h1 class="hero__title" id="hero-title">Lotus <em>Transformation</em> Healing</h1>
+        <p class="hero__subtitle" data-i18n="hero.subtitle">
+          Sanación integral, terapias energéticas y restauración emocional en un espacio sereno, elegante y profesional.
+        </p>
+        <div class="hero__actions">
+          <a class="btn" href="#booking" data-i18n="hero.cta1">Agendar Sesión</a>
+          <a class="btn btn--ghost" href="#services" data-i18n="hero.cta2">Conocer Servicios</a>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#about" aria-label="Desliza para ver más">
+        <span data-i18n="hero.scroll">Desliza</span>
+        <span aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- organic divider -->
+    <div class="divider" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" fill="currentColor">
+        <path d="M0,40 C240,90 480,0 720,30 C960,60 1200,10 1440,45 L1440,80 L0,80 Z" />
+      </svg>
+    </div>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section section--alt" id="about" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <div class="about__media" data-reveal>
+          <img class="about__img"
+               src="https://images.unsplash.com/photo-1591343395082-e120087004b4?auto=format&fit=crop&w=900&q=80"
+               width="900" height="1125"
+               alt="Rose Segura, terapeuta holística, en un ambiente cálido tipo spa"
+               loading="lazy" decoding="async" />
+        </div>
+        <div class="about__text" data-reveal>
+          <span class="eyebrow" data-i18n="about.eyebrow">Sobre Rose Segura</span>
+          <h2 id="about-title" data-i18n="about.title">Un espacio seguro para sanar y reconectar contigo</h2>
+          <p data-i18n="about.p1">En Lotus Transformation Healing acompaño cada proceso desde la calidez, el respeto y la presencia.</p>
+          <p data-i18n="about.p2">Cada sesión está diseñada para favorecer el equilibrio integral y reconectar con la paz interior.</p>
+          <p data-i18n="about.p3">Aquí encontrarás cercanía, profesionalismo y un acompañamiento humano.</p>
+          <p class="about__signature" data-i18n="about.signature">Rose Segura · Terapeuta Holística</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section" id="services" aria-labelledby="services-title">
+      <div class="deco-lotus float-slow" style="top:6%;right:4%;width:120px;height:120px;" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M24 42c-6-2-10-8-10-15 0-6 4-11 10-15 6 4 10 9 10 15 0 7-4 13-10 15Z"/><path d="M24 42c-7-1-13-7-14-14 4 2 8 5 9 10M24 42c7-1 13-7 14-14-4 2-8 5-9 10"/></svg>
+      </div>
+
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <span class="eyebrow" data-i18n="services.eyebrow">Terapias</span>
+          <h2 id="services-title" data-i18n="services.title">Servicios de sanación integral</h2>
+          <p class="lead" data-i18n="services.lead">Cada terapia honra las dimensiones emocional, mental, física y espiritual del bienestar.</p>
+        </div>
+
+        <ul class="services__grid" data-reveal-stagger>
+          <!-- 1 -->
+          <li class="service-card">
+            <span class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.35-9.5-8.5C1 9 2.5 5.5 6 5.5c2 0 3.2 1.2 4 2.5.8-1.3 2-2.5 4-2.5 3.5 0 5 3.5 3.5 7-1 1.7-2.7 3.4-4.5 5"/></svg>
+            </span>
+            <h3 class="service-card__title" data-i18n="service.1.title">Sesiones Tanatológicas Holísticas</h3>
+            <p class="service-card__desc" data-i18n="service.1.desc"></p>
+            <a class="service-card__link" href="#booking" data-book-service="service.1">
+              <span data-i18n="services.cta">Agendar</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </li>
+          <!-- 2 -->
+          <li class="service-card">
+            <span class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-9 8.38 8.5 8.5 0 0 1-3.8-.9L3 20l1.9-4.1A8.38 8.38 0 0 1 4 11.5 8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5Z"/></svg>
+            </span>
+            <h3 class="service-card__title" data-i18n="service.2.title">Sesiones Tanatológicas Tradicionales</h3>
+            <p class="service-card__desc" data-i18n="service.2.desc"></p>
+            <a class="service-card__link" href="#booking" data-book-service="service.2">
+              <span data-i18n="services.cta">Agendar</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </li>
+          <!-- 3 -->
+          <li class="service-card">
+            <span class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="5"/></svg>
+            </span>
+            <h3 class="service-card__title" data-i18n="service.3.title">Coach de Duelo</h3>
+            <p class="service-card__desc" data-i18n="service.3.desc"></p>
+            <a class="service-card__link" href="#booking" data-book-service="service.3">
+              <span data-i18n="services.cta">Agendar</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </li>
+          <!-- 4 -->
+          <li class="service-card">
+            <span class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/></svg>
+            </span>
+            <h3 class="service-card__title" data-i18n="service.4.title">Sesiones de Reiki</h3>
+            <p class="service-card__desc" data-i18n="service.4.desc"></p>
+            <a class="service-card__link" href="#booking" data-book-service="service.4">
+              <span data-i18n="services.cta">Agendar</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </li>
+          <!-- 5 -->
+          <li class="service-card">
+            <span class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3v8a3 3 0 0 0 6 0V3M12 14v7"/><path d="M5 21h14"/></svg>
+            </span>
+            <h3 class="service-card__title" data-i18n="service.5.title">Terapia con Diapasones</h3>
+            <p class="service-card__desc" data-i18n="service.5.desc"></p>
+            <a class="service-card__link" href="#booking" data-book-service="service.5">
+              <span data-i18n="services.cta">Agendar</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </li>
+          <!-- 6 -->
+          <li class="service-card">
+            <span class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6" r="2.2"/><circle cx="12" cy="12" r="2.2"/><circle cx="12" cy="18" r="2.2"/></svg>
+            </span>
+            <h3 class="service-card__title" data-i18n="service.6.title">Alineación de Chakras</h3>
+            <p class="service-card__desc" data-i18n="service.6.desc"></p>
+            <a class="service-card__link" href="#booking" data-book-service="service.6">
+              <span data-i18n="services.cta">Agendar</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </li>
+          <!-- 7 -->
+          <li class="service-card">
+            <span class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 3A4.5 4.5 0 0 0 5 7.5c0 1 .3 1.8.8 2.5A4 4 0 0 0 7 17a3.5 3.5 0 0 0 5 3V3.5A2.5 2.5 0 0 0 9.5 3Z"/><path d="M14.5 3A4.5 4.5 0 0 1 19 7.5c0 1-.3 1.8-.8 2.5A4 4 0 0 1 17 17a3.5 3.5 0 0 1-5 3"/></svg>
+            </span>
+            <h3 class="service-card__title" data-i18n="service.7.title">Terapias con Programación Neurolingüística</h3>
+            <p class="service-card__desc" data-i18n="service.7.desc"></p>
+            <a class="service-card__link" href="#booking" data-book-service="service.7">
+              <span data-i18n="services.cta">Agendar</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </li>
+          <!-- 8 -->
+          <li class="service-card">
+            <span class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 21 7v10l-9 5-9-5V7l9-5Z"/><path d="M12 7v10M7.5 9.5 12 12l4.5-2.5"/></svg>
+            </span>
+            <h3 class="service-card__title" data-i18n="service.8.title">Terapias con Biogeometría Avanzada</h3>
+            <p class="service-card__desc" data-i18n="service.8.desc"></p>
+            <a class="service-card__link" href="#booking" data-book-service="service.8">
+              <span data-i18n="services.cta">Agendar</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </li>
+          <!-- 9 -->
+          <li class="service-card">
+            <span class="service-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 4v5h-5"/><circle cx="12" cy="12" r="2.4"/></svg>
+            </span>
+            <h3 class="service-card__title" data-i18n="service.9.title">Restauración Energética de Reseteo</h3>
+            <p class="service-card__desc" data-i18n="service.9.desc"></p>
+            <a class="service-card__link" href="#booking" data-book-service="service.9">
+              <span data-i18n="services.cta">Agendar</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ ATMOSPHERE ============ -->
+    <section class="section section--alt" id="atmosphere" aria-labelledby="atmosphere-title">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <span class="eyebrow" data-i18n="atmosphere.eyebrow">La Experiencia</span>
+          <h2 id="atmosphere-title" data-i18n="atmosphere.title">Un ambiente diseñado para tu calma</h2>
+          <p class="lead" data-i18n="atmosphere.lead">Velas suaves, cuarzos, flores blancas y luz cálida.</p>
+          <div class="ornament" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M24 40c-6-2-10-8-10-15 0-6 4-11 10-15 6 4 10 9 10 15 0 7-4 13-10 15Z"/></svg>
+          </div>
+        </div>
+
+        <!-- Velas 3D (Three.js) -->
+        <div class="scene-candles" data-reveal aria-hidden="true">
+          <canvas class="scene-candles__canvas" data-three="candles"></canvas>
+          <span class="scene-candles__vignette"></span>
+        </div>
+
+        <div class="atmosphere__grid" data-reveal-stagger>
+          <figure class="atmosphere__item atmosphere__item--tall">
+            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80" alt="Velas encendidas y luz cálida en una sala de terapia" loading="lazy" decoding="async" />
+            <figcaption class="atmosphere__caption" data-i18n="atmosphere.cap1">Luz cálida</figcaption>
+          </figure>
+          <figure class="atmosphere__item">
+            <img src="https://images.unsplash.com/photo-1608068811588-3a67006b7489?auto=format&fit=crop&w=800&q=80" alt="Cuarzos y cristales sobre superficie de madera clara" loading="lazy" decoding="async" />
+            <figcaption class="atmosphere__caption" data-i18n="atmosphere.cap2">Cuarzos</figcaption>
+          </figure>
+          <figure class="atmosphere__item">
+            <img src="https://images.unsplash.com/photo-1556760544-74068565f05c?auto=format&fit=crop&w=800&q=80" alt="Aceites esenciales y flores blancas para aromaterapia" loading="lazy" decoding="async" />
+            <figcaption class="atmosphere__caption" data-i18n="atmosphere.cap3">Aromaterapia</figcaption>
+          </figure>
+          <figure class="atmosphere__item atmosphere__item--wide">
+            <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=1000&q=80" alt="Espacio sereno y minimalista con tonos beige y madera" loading="lazy" decoding="async" />
+            <figcaption class="atmosphere__caption" data-i18n="atmosphere.cap4">Espacio sereno</figcaption>
+          </figure>
+          <figure class="atmosphere__item">
+            <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=800&q=80" alt="Flores blancas y orquídeas sobre piedras en un ambiente spa" loading="lazy" decoding="async" />
+            <figcaption class="atmosphere__caption" data-i18n="atmosphere.cap5">Flores blancas</figcaption>
+          </figure>
+          <figure class="atmosphere__item">
+            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" alt="Camilla terapéutica con piedras calientes para masaje" loading="lazy" decoding="async" />
+            <figcaption class="atmosphere__caption" data-i18n="atmosphere.cap6">Piedras calientes</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="section" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <div class="section__head" data-reveal>
+          <span class="eyebrow" data-i18n="testimonials.eyebrow">Testimonios</span>
+          <h2 id="testimonials-title" data-i18n="testimonials.title">Historias de transformación</h2>
+        </div>
+
+        <div class="testimonials__grid" data-reveal-stagger>
+          <figure class="testimonial">
+            <span class="testimonial__quote-mark" aria-hidden="true">&ldquo;</span>
+            <blockquote class="testimonial__text" data-i18n="t1.text"></blockquote>
+            <figcaption class="testimonial__author">
+              <img class="testimonial__avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80" alt="" loading="lazy" decoding="async" />
+              <span>
+                <span class="testimonial__name" data-i18n="t1.name">María G.</span><br />
+                <span class="testimonial__role" data-i18n="t1.role">Sesiones de Reiki</span>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="testimonial">
+            <span class="testimonial__quote-mark" aria-hidden="true">&ldquo;</span>
+            <blockquote class="testimonial__text" data-i18n="t2.text"></blockquote>
+            <figcaption class="testimonial__author">
+              <img class="testimonial__avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="" loading="lazy" decoding="async" />
+              <span>
+                <span class="testimonial__name" data-i18n="t2.name">Daniel R.</span><br />
+                <span class="testimonial__role" data-i18n="t2.role">Terapia Tanatológica</span>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="testimonial">
+            <span class="testimonial__quote-mark" aria-hidden="true">&ldquo;</span>
+            <blockquote class="testimonial__text" data-i18n="t3.text"></blockquote>
+            <figcaption class="testimonial__author">
+              <img class="testimonial__avatar" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="" loading="lazy" decoding="async" />
+              <span>
+                <span class="testimonial__name" data-i18n="t3.name">Sofía L.</span><br />
+                <span class="testimonial__role" data-i18n="t3.role">Alineación de Chakras</span>
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BOOKING ============ -->
+    <section class="section booking" id="booking" aria-labelledby="booking-title">
+      <div class="container">
+        <div class="booking__card" data-reveal>
+          <span class="eyebrow" data-i18n="booking.eyebrow">Reserva</span>
+          <h2 id="booking-title" data-i18n="booking.title">Agenda tu sesión</h2>
+          <p class="lead" data-i18n="booking.lead">Reserva por teléfono o WhatsApp. Elige tu terapia y te respondemos personalmente.</p>
+
+          <div class="booking__field">
+            <label class="booking__label" for="therapy" data-i18n="booking.label">¿Qué terapia te interesa?</label>
+            <select class="booking__select" id="therapy">
+              <option value="service.1" data-i18n="service.1.title">Sesiones Tanatológicas Holísticas</option>
+              <option value="service.2" data-i18n="service.2.title">Sesiones Tanatológicas Tradicionales</option>
+              <option value="service.3" data-i18n="service.3.title">Coach de Duelo</option>
+              <option value="service.4" data-i18n="service.4.title">Sesiones de Reiki</option>
+              <option value="service.5" data-i18n="service.5.title">Terapia con Diapasones</option>
+              <option value="service.6" data-i18n="service.6.title">Alineación de Chakras</option>
+              <option value="service.7" data-i18n="service.7.title">Terapias con Programación Neurolingüística</option>
+              <option value="service.8" data-i18n="service.8.title">Terapias con Biogeometría Avanzada</option>
+              <option value="service.9" data-i18n="service.9.title">Restauración Energética de Reseteo</option>
+            </select>
+          </div>
+
+          <div class="booking__actions">
+            <a class="btn btn--whatsapp" data-action="whatsapp" href="https://wa.me/14242004019" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.2-1.7-.8-1.9-.9-.3-.1-.5-.2-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.5-.7-2.5-1.3-3.5-3-.3-.5.3-.4.8-1.4.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.2.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.8.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3Z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-2.9.8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z"/></svg>
+              <span data-i18n="booking.whatsapp">WhatsApp</span>
+            </a>
+            <a class="btn btn--ghost" data-action="call" href="tel:+14242004019">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg>
+              <span data-i18n="booking.call">Llamar</span>
+              <span aria-hidden="true">· +1 (424) 200-4019</span>
+            </a>
+          </div>
+          <p class="booking__note" data-i18n="booking.note">Atención personalizada · Respuesta cálida y profesional</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="cta__bg" data-parallax="0.12" aria-hidden="true"></div>
+      <div class="container cta__inner" data-reveal>
+        <h2 id="cta-title" data-i18n="cta.title">Tu proceso de transformación puede comenzar hoy</h2>
+        <p class="cta__sub" data-i18n="cta.sub">Permítete sanar, reconectar contigo y recuperar tu equilibrio interior.</p>
+        <a class="btn" href="#booking" data-i18n="cta.btn">Agendar Mi Sesión</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__brand">
+          <a class="brand" href="#hero" aria-label="Lotus Transformation Healing — inicio">
+            <span class="brand__mark" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 40c-8 0-15-4-17-9 3 1 6 1 9 0M24 40c8 0 15-4 17-9-3 1-6 1-9 0"/><path d="M24 40c-5-2-8-7-8-13 0-5 3-9 8-13 5 4 8 8 8 13 0 6-3 11-8 13Z"/></svg>
+            </span>
+            <span class="brand__name">Lotus Transformation Healing</span>
+          </a>
+          <p class="footer__tagline" data-i18n="footer.tagline">Centro holístico de sanación integral, terapias energéticas y restauración emocional.</p>
+          <div class="footer__socials">
+            <a class="footer__social" href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a class="footer__social" href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V5h-3a4 4 0 0 0-4 4v2H7v4h3v6h4v-6h3l1-4h-4V9a1 1 0 0 1 1-1Z"/></svg>
+            </a>
+            <a class="footer__social" href="https://wa.me/14242004019" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.1 8.1 0 0 1-4.4-1.3l-.3-.2-2.9.8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.2c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.1-.3 0-.4.1-.5l.4-.5c.1-.2.1-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3 1 2.6 1.1 2.7.1.2 1.9 3 4.6 4.1 1.7.7 2.3.8 3.1.7.5-.1 1.4-.6 1.6-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.4-.3Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 data-i18n="footer.contact">Contacto</h4>
+          <ul class="footer__list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.4 2.4 1 3.4.6 4.1L8 9.6a16 16 0 0 0 6 6l1.1-1.1c.5-.5 1.7.2 4.1.6A2 2 0 0 1 22 16.9Z"/></svg>
+              <a href="tel:+14242004019">+1 (424) 200-4019</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              <a href="mailto:hello@lotushealing.com">hello@lotushealing.com</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span data-i18n="footer.location">Los Ángeles, California</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 data-i18n="footer.hoursTitle">Horarios</h4>
+          <ul class="footer__list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              <span data-i18n="footer.hours">Lun – Sáb · 9:00 – 19:00</span>
+            </li>
+          </ul>
+          <a class="btn btn--ghost" href="#booking" style="margin-top:1.5rem" data-i18n="nav.cta">Agendar Sesión</a>
+        </div>
+      </div>
+
+      <p class="footer__bottom">
+        <span data-i18n="footer.rights">© 2026 Lotus Transformation Healing. Todos los derechos reservados.</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ============ SCRIPTS ============ -->
+  <!-- GSAP for fluid animations (optional enhancement) -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- App modules (defer preserves order; support.js first) -->
+  <script defer src="js/support.js"></script>
+  <script defer src="js/language.js"></script>
+  <script defer src="js/cursor.js"></script>
+  <script defer src="js/parallax.js"></script>
+  <script defer src="js/navigation.js"></script>
+  <script defer src="js/booking.js"></script>
+  <script defer src="js/animations.js"></script>
+  <script defer src="js/main.js"></script>
+
+  <!-- ============ 3D (Three.js ESM + GSAP scroll) ============ -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+    }
+  }
+  </script>
+  <script type="module" src="js/three/index.js"></script>
+</body>
+</html>
