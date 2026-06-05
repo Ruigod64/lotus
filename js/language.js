@@ -121,7 +121,7 @@
     "atmosphere.cap3": { es: "Aromaterapia",   en: "Aromatherapy" },
     "atmosphere.cap4": { es: "Espacio sereno", en: "Serene space" },
     "atmosphere.cap5": { es: "Flores blancas", en: "White flowers" },
-    "atmosphere.cap6": { es: "Piedras calientes", en: "Hot stones" },
+    "atmosphere.cap6": { es: "Biomagnetismo", en: "Biomagnetism" },
 
     /* Bio */
     "bio.eyebrow": { es: "Biografía", en: "Biography" },

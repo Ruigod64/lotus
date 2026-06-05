@@ -214,6 +214,11 @@
   box-shadow: var(--shadow-md);
 }
 
+.about__media--feature .about__img {
+  aspect-ratio: 5 / 6;
+  object-position: 70% center;
+}
+
 .about__media::after {
   content: "";
   position: absolute;
