@@ -14,7 +14,8 @@
     "a11y.menu":     { es: "Abrir menú",        en: "Open menu" },
 
     /* Nav */
-    "nav.about":        { es: "Sobre Rose",     en: "About" },
+    "nav.about":        { es: "Sobre Lotus",    en: "About Lotus" },
+    "nav.bio":          { es: "Sobre Rose",     en: "About Rose" },
     "nav.services":     { es: "Servicios",      en: "Services" },
     "nav.atmosphere":   { es: "Experiencia",    en: "Experience" },
     "nav.testimonials": { es: "Testimonios",    en: "Testimonials" },
@@ -31,7 +32,7 @@
     "hero.scroll": { es: "Desliza",           en: "Scroll" },
 
     /* About */
-    "about.eyebrow": { es: "Sobre Rose Segura", en: "About Rose Segura" },
+    "about.eyebrow": { es: "About", en: "About" },
     "about.title":   { es: "Un espacio seguro para sanar y reconectar contigo",
                        en: "A safe space to heal and reconnect with yourself" },
     "about.p1": {
@@ -99,6 +100,8 @@
       es: "Sesiones enfocadas en la armonización energética a través de principios de biogeometría y equilibrio vibracional. Este enfoque busca favorecer la coherencia energética del cuerpo y del entorno, promoviendo bienestar, relajación y estabilidad integral. Una experiencia terapéutica orientada a restaurar el equilibrio energético y apoyar procesos naturales de bienestar físico y emocional.",
       en: "Advanced energetic balancing sessions integrating principles of bio-geometry, vibrational harmony and energetic restoration. This therapeutic approach is designed to support energetic coherence within the body and environment while promoting balance, relaxation and overall wellbeing. These sessions aim to help restore energetic equilibrium and support the body's natural healing processes."
     },
+    "gallery.eyebrow": { es: "Vista de las terapias", en: "A glimpse of the therapies" },
+
     "service.9.title": { es: "Restauración Energética de Reseteo", en: "Energetic Reset Restoration" },
     "service.9.desc": {
       es: "Sesión terapéutica enfocada en liberar tensión acumulada, favorecer la relajación profunda y ayudar a restaurar el equilibrio energético del cuerpo. Este enfoque busca apoyar el bienestar físico y emocional mediante técnicas de armonización energética y restauración integral. Diseñada para ayudar a disminuir sensación de tensión y malestar energético relacionado con: cabeza, hombros, espalda, cervicales y rodillas. Brindando una experiencia de descanso, alivio y reconexión corporal desde una perspectiva holística y terapéutica.",
@@ -119,6 +122,33 @@
     "atmosphere.cap4": { es: "Espacio sereno", en: "Serene space" },
     "atmosphere.cap5": { es: "Flores blancas", en: "White flowers" },
     "atmosphere.cap6": { es: "Piedras calientes", en: "Hot stones" },
+
+    /* Bio */
+    "bio.eyebrow": { es: "Biografía", en: "Biography" },
+    "bio.title": {
+      es: "Rose Segura — Tanatóloga y Terapeuta Holística",
+      en: "Rose Segura — Grief Counselor & Holistic Therapist"
+    },
+    "bio.p1": {
+      es: "Rose Segura es tanatóloga, coach especializada en procesos de duelo y terapeuta holística dedicada al acompañamiento integral de personas que atraviesan pérdidas, cambios profundos, desafíos emocionales y etapas de transformación personal. Su enfoque combina conocimientos terapéuticos, desarrollo humano y técnicas de armonización energética para acompañar a cada persona de manera respetuosa, profesional y profundamente humana.",
+      en: "Rose Segura is a grief counselor, bereavement coach and holistic therapist dedicated to supporting individuals through loss, life transitions, emotional challenges and profound personal transformation. Her approach combines therapeutic expertise, personal development and holistic healing modalities to provide compassionate, professional and individualized care."
+    },
+    "bio.p2": {
+      es: "A lo largo de su trayectoria ha ayudado a personas a encontrar fortaleza en medio del dolor, recuperar su equilibrio emocional y reconstruir una vida con mayor sentido, bienestar y propósito. Su práctica integra herramientas como Tanatología, Programación Neurolingüística (PNL), Reiki, Biomagnetismo Avanzado, terapia con diapasones terapéuticos y diversas técnicas holísticas orientadas a favorecer la armonía entre mente, cuerpo, emociones y energía.",
+      en: "Throughout her career she has guided people in finding strength during difficult times, restoring emotional balance and rebuilding their lives with greater meaning, resilience and purpose. Rose integrates a variety of healing practices, including Grief Counseling, Neurolinguistic Programming (NLP), Reiki, Advanced Biomagnetism, Tuning Fork Therapy and other holistic techniques designed to promote harmony between the mind, body, emotions and energy field."
+    },
+    "bio.p3": {
+      es: "Como fundadora de Lotus Transformation Healing, ha creado un espacio diseñado para brindar contención, claridad y acompañamiento durante los momentos más importantes de la vida. Su misión es ayudar a las personas a transformar el sufrimiento en crecimiento, la incertidumbre en confianza y el dolor en una oportunidad para redescubrir su propia fortaleza interior.",
+      en: "As the founder of Lotus Transformation Healing, she has created a nurturing and supportive environment where individuals can feel safe, understood and empowered throughout their healing journey. Her mission is to help people transform pain into growth, uncertainty into clarity and life's challenges into opportunities for renewal and self-discovery."
+    },
+    "bio.p4": {
+      es: "Rose cree firmemente que la sanación no consiste en olvidar lo vivido, sino en aprender a integrarlo con amor, comprensión y conciencia. Por ello, cada sesión es personalizada y orientada a ofrecer una experiencia terapéutica profunda, respetuosa y transformadora, donde la persona se sienta acompañada, escuchada y sostenida en cada etapa de su proceso.",
+      en: "Rose believes that healing is not about forgetting what has happened, but about learning to integrate life experiences with compassion, awareness and inner strength. Every session is thoughtfully tailored to meet the unique needs of each individual, offering a deeply transformative experience grounded in professionalism, empathy and genuine human connection."
+    },
+    "bio.signature": {
+      es: "Rose Segura · Lotus Transformation Healing",
+      en: "Rose Segura · Lotus Transformation Healing"
+    },
 
     /* Testimonials */
     "testimonials.eyebrow": { es: "Testimonios", en: "Testimonials" },

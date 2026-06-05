@@ -97,6 +97,11 @@
   z-index: 0;
 }
 
+.deco-lotus--sage {
+  color: var(--color-sage);
+  opacity: 0.32;
+}
+
 .deco-lotus svg {
   width: 100%;
   height: 100%;

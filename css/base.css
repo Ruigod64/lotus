@@ -82,6 +82,21 @@ small,
   opacity: 0.7;
 }
 
+/* Sage variant for therapeutic/calm sections */
+#bio .eyebrow,
+#atmosphere .eyebrow,
+#testimonials .eyebrow {
+  color: var(--color-sage);
+}
+
+#bio .eyebrow::before,
+#atmosphere .eyebrow::before,
+#testimonials .eyebrow::before {
+  background: var(--color-sage);
+  opacity: 1;
+  width: 34px;
+}
+
 .lead {
   font-size: var(--fs-lead);
   line-height: var(--lh-snug);
