@@ -112,7 +112,7 @@
   .hero__bg {
     background-image:
       linear-gradient(to bottom, rgba(246, 241, 235, 0.88) 0%, rgba(246, 241, 235, 0.62) 60%, rgba(246, 241, 235, 0.42) 100%),
-      url("../assets/hero.jpg");
+      url("../assets/Rose/banner.png");
   }
 
   .about__grid {
